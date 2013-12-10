@@ -1,0 +1,72 @@
+\documentclass[a4paper,landscape]{article}
+
+%\usepackage[swedish]{babel}
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+
+\usepackage[margin=0.5cm,landscape]{geometry} % We dont want fat margins
+\usepackage{multicol} % Columns!
+\usepackage[fontsize=6pt]{scrextend} % Use a small font
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+%% Redefine section to use less space
+%\makeatletter
+%\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+%                                {-1ex plus -.5ex minus -.2ex}%
+%                                {0.5ex plus .2ex}%x
+%                                {\normalfont\large\bfseries}}
+%\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+%                                {-1explus -.5ex minus -.2ex}%
+%                                {0.5ex plus .2ex}%
+%                                {\normalfont\normalsize\bfseries}}
+%\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+%                                {-1ex plus -.5ex minus -.2ex}%
+%                                {1ex plus .2ex}%
+%                                {\normalfont\small\bfseries}}
+%\makeatother
+
+% Don't print section numbers
+\setcounter{secnumdepth}{0}
+
+% Spacing between lines
+\linespread{0.7}
+
+% Remove spacing around align and between operators i math mode
+% see http://tex.stackexchange.com/questions/41913/how-to-get-less-spacing-in-math-mode
+\usepackage{etoolbox}
+\newcommand{\zerodisplayskips}{%
+%  \setlength{\abovedisplayskip}{0pt}
+%  \setlength{\belowdisplayskip}{0pt}
+%  \setlength{\abovedisplayshortskip}{0pt}
+%  \setlength{\belowdisplayshortskip}{0pt}
+  \setlength{\thinmuskip}{0mu}
+  \setlength{\medmuskip}{0mu}
+  \setlength{\thickmuskip}{0mu}}
+\appto{\normalsize}{\zerodisplayskips}
+\appto{\small}{\zerodisplayskips}
+\appto{\footnotesize}{\zerodisplayskips}
+
+%--------------------------------------------------------------------------
+
+\author{Daniel Pettersson}
+
+\begin{document}
+\begin{multicols*}{4}
+\begin{center}
+	\Large{\textbf{XXXXXX Cheat Sheet}} \\
+\end{center}
+
+Insert text here
+
+\section{Insert sections}
+
+Some beautiful formulas
+\[ PV = nRT \]
+\[ Q = \Delta E_{int} + W_{gas} \]
+
+
+%\rule{0.38\linewidth}{0.4pt}
+
+\end{multicols*}
+\end{document}
